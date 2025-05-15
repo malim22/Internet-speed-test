@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rural vs City Internet Speed</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --primary-color: #4b0082;
+      --secondary-color: #6a5acd;
+      --background-color: #f9fbfd;
+      --card-background: #ffffff;
+      --text-color: #333333;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      --border-radius: 12px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    header h1:hover {
+      color: #e0e0e0;
+    }
+
+    .info-box {
+      display: none;
+      background-color: #ffffff;
+      color: #333;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 100%;
+      width: 90%;
+      max-width: 600px;
+      padding: 1.5rem;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      margin-top: 10px;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      z-index: 1000;
+    }
+
+    header:hover .info-box {
+      display: block;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    section {
+      background-color: var(--card-background);
+      padding: 2rem;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+    }
+
+    section:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    h2 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .hover-info {
+      display: none;
+      background-color: #f0f0f0;
+      padding: 1rem;
+      margin-top: 0.5rem;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      font-size: 0.95rem;
+    }
+
+    h2:hover + .hover-info {
+      display: block;
+    }
+
+    ul {
+      padding-left: 0;
+      list-style: none;
+    }
+
+    ul li {
+      margin-bottom: 0.7rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    ul li::before {
+      content: '✔️';
+      position: absolute;
+      left: 0;
+      top: 0.1rem;
+      color: var(--primary-color);
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: var(--secondary-color);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #483d8b;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: #888;
+      font-size: 0.9rem;
+      background-color: #f1f1f1;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      section {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Internet Speed in Rural vs City Areas</h1>
+    <div class="info-box">
+      <strong>Quick Info:</strong>
+      <p>City areas enjoy high-speed internet due to better infrastructure. Rural areas often lack reliable service due to outdated tech or poor investment.</p>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>📊 Average Internet Speeds</h2>
+      <div class="hover-info">
+        City speeds are often between 50–200 Mbps. Rural areas may get only 2–20 Mbps due to weaker infrastructure.
+      </div>
+      <ul>
+        <li><strong>City Areas:</strong> 50–200 Mbps</li>
+        <li><strong>Rural Areas:</strong> 2–20 Mbps</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🚧 Challenges in Rural Areas</h2>
+      <div class="hover-info">
+        These include poor coverage, lack of fiber optic lines, low ISP investment, and difficult terrains.
+      </div>
+      <ul>
+        <li>Lack of broadband infrastructure</li>
+        <li>Lower investment from ISPs</li>
+        <li>Environmental limitations & geography</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>💡 Possible Solutions</h2>
+      <div class="hover-info">
+        To improve connectivity: government grants, satellite tech like Starlink, and partnerships can help bridge the gap.
+      </div>
+      <ul>
+        <li>Government support for rural expansion</li>
+        <li>Use of satellite services like Starlink</li>
+        <li>Public-private partnerships for networks</li>
+        <li>Community mesh networks in villages</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 Test Your Internet Speed</h2>
+      <div class="hover-info">
+        I built a real-time speed test using JavaScript. Click below to try it!
+      </div>
+      <p>Click the button to test your connection using my custom speed detector:</p>
+      <a href="index.html" class="button">Test My Speed</a>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>Project by Aryan Sharma</strong> | Built with 
+      <span style="color: #4b0082;">HTML</span>, 
+      <span style="color: #6a5acd;">CSS</span> & JavaScript
+    </p>
+  </footer>
+
+</body>
+
+</html>
